@@ -81,6 +81,12 @@ weight = -10
 identifier = "repository"
 url = "https://github.com/mladlow"
 
+[[menu.main]]
+name = "MD Farms"
+weight = 0
+identifier = "md horse farms"
+url = "https://meggiel.com/maryland-farms/index.html"
+
 [blackfriday]
 hrefTargetBlank = true
 
