@@ -41,15 +41,22 @@ dateFormat = "2006, Jan 02"
 listDateFormat = "2006, Jan 02"
 hideEntryNavigation = ["page"] # boolean / array of sections
 hideSocialMenu = false
+hideMainMenu = false
 showReadingTime = true
 
-[params.opengraph.facebook]
-admins = [] # array of Facebook IDs
-appID = ""
-pageID = ""
+[params.sidebar]
+enable = true
 
-[params.opengraph.twitter]
-page = "meggiel" # Twitter page username
+[params.widgets]
+sidebar = ["about"]
+
+#[params.opengraph.facebook]
+#admins = [] # array of Facebook IDs
+#appID = ""
+#pageID = ""
+
+#[params.opengraph.twitter]
+#page = "meggiel" # Twitter page username
 
 [params.seo]
 # Title Separator: - – — · • * ⋆ | ~ « » < >
@@ -57,7 +64,7 @@ titleSeparator = "•"
 
 [params.social]
 #codepen = "MunifTanjim"
-email = "m.ladlow@gmail.com"
+email = "meggiel@pm.me"
 #facebook = "MunifTanjim"
 github = "mladlow"
 #instagram = "MunifTanjim"
@@ -66,6 +73,9 @@ twitter = "meggiel"
 
 [params.social.config]
 platforms = ["github","twitter","email","linkedin"]
+
+[params.comments]
+enable = false
 
 [taxonomies]
 author = "authors"
@@ -76,14 +86,26 @@ tag = "tags"
 page = "/:slug/"
 
 [[menu.main]]
+name = "Home"
+weight = 0
+identifier = "home"
+url = "/"
+
+[[menu.main]]
+name = "About"
+weight = 1
+identifier ="about me"
+url = "/about/"
+
+[[menu.main]]
 name = "Repo"
-weight = -10
+weight = 2
 identifier = "repository"
 url = "https://github.com/mladlow"
 
 [[menu.main]]
 name = "MD Farms"
-weight = 0
+weight = 3
 identifier = "md horse farms"
 url = "https://meggiel.com/maryland-farms/index.html"
 
