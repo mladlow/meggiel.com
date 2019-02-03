@@ -4,12 +4,15 @@
   background: rgb(61, 79, 93);
   color: rgb(255, 255, 255);
 }
-
 .sidebar a:link {
   color: rgb(127, 182, 219);
 }
 .sidebar a:visited {
   color: rgb(156, 160, 163);
+}
+
+.content {
+  padding: 2em 2em 0;
 }
 
 .header {

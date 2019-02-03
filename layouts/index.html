@@ -1,6 +1,6 @@
 {{ partial "header.html" . }}
 
-{{ range first 10 .Data.Pages }}
+{{ range first 10 (where .Data.Pages "Type" "blog") }}
 <h1><a href={{ .Permalink }}>{{ .Title }}</a></h1>
 {{ end }}
 
