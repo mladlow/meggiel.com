@@ -3,4 +3,4 @@ languageCode = "en-us"
 title = "Meggie Ladlow"
 
 [params]
-  homeSections = ["blog"]
+  homeSections = ["blog", "project"]

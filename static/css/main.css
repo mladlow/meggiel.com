@@ -1,18 +1,35 @@
 /* coolers.co: https://coolors.co/b0cadb-9ca0a3-3d4f5d-4d5960-7fb6db */
 
+:root {
+  --light-grey: #9CA0A3;
+  --dark-grey: #4D5960;
+  --ice-blue: #B0CADB;
+  --baby-blue: #7FB6DB;
+  --grey-blue: #3D4F5D;
+  --dark-blue: #264F6B;
+  --bright-blue: #45A2E0;
+}
+
 .sidebar {
-  background: rgb(61, 79, 93);
-  color: rgb(255, 255, 255);
+  background: var(--grey-blue);
+  color: white;
 }
 .sidebar a:link {
-  color: rgb(127, 182, 219);
+  color: var(--baby-blue);
 }
 .sidebar a:visited {
-  color: rgb(156, 160, 163);
+  color: var(--light-grey);
 }
 
 .content {
   padding: 2em 2em 0;
+  color: #4D5960;
+}
+.content a:link {
+  color: var(--bright-blue);
+}
+.content a:visited {
+  color: var(--dark-blue);
 }
 
 .header {
