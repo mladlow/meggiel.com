@@ -9,7 +9,7 @@ draft: false
 
 ## End Results
 
-Link to project: <https://meggiel.com/maryland-farms/index.html>
+Link to project: <https://meggiel.com/maryland-farms/>
 Link to source: <https://github.com/mladlow/maryland-farms>
 
 ## Background
