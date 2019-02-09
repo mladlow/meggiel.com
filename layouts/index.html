@@ -1,0 +1,11 @@
+{{ partial "header.html" . }}
+
+{{ .Content }}
+
+<h1>Recent Posts</h1>
+{{ range first 10 (where .Data.Pages "Type" "in" .Site.Params.homeSections) }}
+<h2><a href={{ .Permalink }}>{{ .Title }}</a></h2>
+<p>{{ .Description }}
+{{ end }}
+
+{{ partial "footer.html" . }}

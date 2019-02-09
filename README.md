@@ -1,10 +1,5 @@
 Website code. Start server after clone with `hugo server`.
 
-From a new clone will need to:
-
-```
-git submodule init
-git submodule update
-```
+To show drafts, use `hugo server -D`.
 
 A script will deploy to AWS.

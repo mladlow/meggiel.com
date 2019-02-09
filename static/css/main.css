@@ -1,0 +1,70 @@
+/* coolers.co: https://coolors.co/b0cadb-9ca0a3-3d4f5d-4d5960-7fb6db */
+
+:root {
+  --light-grey: #9CA0A3;
+  --dark-grey: #4D5960;
+  --ice-blue: #B0CADB;
+  --baby-blue: #7FB6DB;
+  --grey-blue: #3D4F5D;
+  --dark-blue: #264F6B;
+  --bright-blue: #45A2E0;
+}
+
+.sidebar {
+  background: var(--grey-blue);
+  color: white;
+}
+.sidebar a:link {
+  color: var(--baby-blue);
+}
+.sidebar a:visited {
+  color: var(--light-grey);
+}
+
+.content {
+  padding: 2em 2em 0;
+  color: #4D5960;
+}
+.content a:link {
+  color: var(--bright-blue);
+}
+.content a:visited {
+  color: var(--dark-blue);
+}
+
+.header {
+  text-align: center;
+  margin: 3em auto;
+}
+
+.title {
+  text-transform: uppercase;
+}
+
+.tagline {
+  font-weight: 300;
+  color: rgb(176, 202, 219);
+}
+
+.nav-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+@media (min-width: 48em) {
+  .content {
+    margin-left: 25%;
+  }
+
+  .sidebar {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+  }
+
+  .header {
+    margin: 80% 2em 0;
+    text-align: right;
+  }
+}
