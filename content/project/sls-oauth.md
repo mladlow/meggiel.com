@@ -29,3 +29,7 @@ The worst part about this is specifying a CIDR block, which requires some hexade
 I started with using a Go example from one of the Serverless examples. I deleted one of their functions to keep things a little simpler.
 
 I then edited the `serverless.yml` to create a VPC. Here's the [commit](https://github.com/mladlow/sls-oauth/commit/e6b05def000e641d53f42c428bb2f5e7c16b6c52).
+
+It's difficult to know what's required to get a Lambda to be able to access resources inside a VPC. Whenever possible, I default to using the AWS documentation, and there are instructions for [Lambda + VPC](https://docs.aws.amazon.com/lambda/latest/dg/vpc.html). These instructions tell me that I need some subnet IDs and some security group IDs. In order to get those, I'm going to have to create some security group and subnet resources in my `serverless.yml` file. Here's the [commit](https://github.com/mladlow/sls-oauth/commit/84dbb99389dea7151aaa77bcfb308e2866fb86f9).
+
+It's worth noting that with this `serverless.yml` file, the cold start time for the lambda becomes noticable. It's worth researching some remediation for cold starts, but outside the scope of this project. At this point, it's possible to look at the Lambda function in the AWS console and see the Subnets and Security Groups there.
