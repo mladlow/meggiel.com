@@ -1,6 +1,8 @@
 # This is a basic workflow to help you get started with Actions
 
 name: CI
+env:
+  HUGO_VERSION: 0.80.0
 
 # Controls when the action will run. 
 on:
@@ -23,17 +25,10 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
 
-      # Runs a set of commands using the runners shell
-      # wget https://github.com/gohugoio/hugo/releases/download/v${{ HUGO_VERSION }}/hugo_${{ HUGO_VERSION }}_Linux-ARM64.tar.gz
-      # tar -xvzf hugo_${{ HUGO_VERSION }}_Linux-ARM64.tar.gz
       - name: Install Hugo
-        env:
-          HUGO_VERSION: 0.80.0
         run: |
-          pwd
-          ls
-          echo https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_${HUGO_VERSION}_Linux-ARM64.tar.gz
+          wget https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_${HUGO_VERSION}_Linux-ARM64.tar.gz
+          tar -xvzf hugo_${HUGO_VERSION}_Linux-ARM64.tar.gz
           
-      # Build website
       - name: Build website
         run: ./hugo
