@@ -2,9 +2,9 @@
 
 {{ .Content }}
 
-<h1>Recent Posts</h1>
+<h2>Recent Posts</h2>
 {{ range first 10 (where .Site.RegularPages "Type" "in" site.Params.homeSections) }}
-<h2><a href={{ .Permalink }}>{{ .Title }}</a></h2>
+<h3><a href={{ .Permalink }}>{{ .Title }}</a></h3>
 <p>{{ .Description }}
 {{ end }}
 
