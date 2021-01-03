@@ -24,6 +24,14 @@ jobs:
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
+      
+      # https://github.com/marketplace/actions/configure-aws-credentials-action-for-github-actions
+      - name: Configure AWS Credentials
+        uses: aws-actions/configure-aws-credentials@v1
+        with:
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws-region: us-east-1
 
       - name: Install Hugo
         env:
@@ -34,3 +42,9 @@ jobs:
           
       - name: Build website
         run: ./hugo
+      
+      - name: Deploy website
+        env:
+          MEGGIELCOM_BUCKET_NAME: ${{ secrets.MEGGIELCOM_BUCKET_NAME }}
+        run:
+          aws s3 sync public/ s3://${MEGGIELCOM_BUCKET_NAME}/ --delete --exclude "maryland-farms/*"
