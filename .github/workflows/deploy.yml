@@ -26,9 +26,11 @@ jobs:
       - uses: actions/checkout@v2
 
       - name: Install Hugo
+        env:
+          HUGO_TARBALL: hugo_${{ HUGO_VERSION }}_Linux-64bit.tar.gz
         run: |
-          wget https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_${HUGO_VERSION}_Linux-ARM64.tar.gz
-          tar -xvzf hugo_${HUGO_VERSION}_Linux-ARM64.tar.gz
+          wget https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/${HUGO_TARBALL}
+          tar -xvzf $HUGO_TARBALL
           
       - name: Build website
         run: ./hugo
