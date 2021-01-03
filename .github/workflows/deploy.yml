@@ -32,6 +32,7 @@ jobs:
         run: |
           pwd
           ls
+          echo $HUGO_VERSION
           
       # Build website
       - name: Build website
