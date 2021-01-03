@@ -32,7 +32,7 @@ jobs:
         run: |
           pwd
           ls
-          echo $HUGO_VERSION
+          echo https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_${HUGO_VERSION}_Linux-ARM64.tar.gz
           
       # Build website
       - name: Build website
