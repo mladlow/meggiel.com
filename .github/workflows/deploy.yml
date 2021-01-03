@@ -27,7 +27,7 @@ jobs:
 
       - name: Install Hugo
         env:
-          HUGO_TARBALL: hugo_${{ HUGO_VERSION }}_Linux-64bit.tar.gz
+          HUGO_TARBALL: hugo_${{ env.HUGO_VERSION }}_Linux-64bit.tar.gz
         run: |
           wget https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/${HUGO_TARBALL}
           tar -xvzf $HUGO_TARBALL
